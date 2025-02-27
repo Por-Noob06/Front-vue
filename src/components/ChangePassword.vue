@@ -1,24 +1,24 @@
 <template>
-  <div class="bg-[#3C3D37] p-6 rounded-xl shadow-md w-1/2 mx-auto mt-10">
-    <h2 class="text-[#ECDFCC] text-xl font-bold mb-4 text-center">Changer le mot de passe</h2>
+  <div class="bg-[#3C3D37] p-6 rounded-xl shadow-md w-1/2 mx-auto mt-28">
+    <h2 class="text-[#ECDFCC] text-xl font-bold mb-4 text-center">Change Password</h2>
 
     <div class="space-y-4">
       <input
         v-model="oldPassword"
         type="password"
-        placeholder="Ancien mot de passe"
+        placeholder="Old Password"
         class="input-field"
       />
       <input
         v-model="newPassword"
         type="password"
-        placeholder="Nouveau mot de passe"
+        placeholder="New Password"
         class="input-field"
       />
       <input
         v-model="confirmPassword"
         type="password"
-        placeholder="Confirmer le nouveau mot de passe"
+        placeholder="Confirm your password"
         class="input-field"
       />
 
@@ -27,7 +27,7 @@
         :disabled="!canSubmit"
         @click="changePassword"
       >
-        Changer
+        Change
       </button>
 
       <p v-if="errorMessage" class="text-red-500 text-sm text-center mt-2">

@@ -17,7 +17,7 @@
 
         <!-- Graphique en Barres -->
         <div class="bg-white p-4 rounded-lg shadow-md">
-          <h2 class="text-xl font-semibold text-[#1E201E] mb-4">Évolution des Commandes</h2>
+          <h2 class="text-xl font-semibold text-[#1E201E] mb-4">Users</h2>
           <BarChart :chart-data="barData" :chart-options="chartOptions" />
         </div>
       </div>
@@ -36,11 +36,11 @@ Chart.register(...registerables);
 
 // Données pour le graphique en camembert
 const pieData = ref({
-  labels: ["Produit A", "Produit B", "Produit C",],
+  labels: ["Admin", "User",],
   datasets: [
     {
       label: "Ventes",
-      data: [40, 25, 35], // Valeurs fictives
+      data: [1, 1,], // Valeurs fictives
       backgroundColor: ["#3C3D37", "#697565", "#ECDFCC"],
     },
   ],
@@ -51,8 +51,8 @@ const barData = ref({
   labels: ["Jan", "Fév", "Mar", "Avr", "Mai"],
   datasets: [
     {
-      label: "Commandes",
-      data: [10, 20, 15, 25, 30], // Valeurs fictives
+      label: "Count",
+      data: [10,20 ,30, 40,50 ], // Valeurs fictives
       backgroundColor: "#1E201E",
     },
   ],

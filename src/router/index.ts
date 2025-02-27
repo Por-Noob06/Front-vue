@@ -4,6 +4,8 @@ import Contact from '@/views/ProfileView.vue'
 import RegisterView from '@/views/authentification/RegisterView.vue'
 import Home from '@/views/Home.vue'
 import ProfileView from '@/views/ProfileView.vue'
+import SendCode from "@/views/SendCode.vue";
+import ResetPassword from '@/views/ResetPassword.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +33,17 @@ const router = createRouter({
       }
     },
     { path: '/user.profile', name: 'profile', component: ProfileView },
+    {
+      path:'/verify-code',
+      name: 'SendCode',
+      component: SendCode
+    },
+    {
+      path:'/change-password',
+      name: 'reset',
+      component: ResetPassword
+    },
+
   ],
 })
 

@@ -33,9 +33,8 @@
           Save
         </button>
       </div>
-
       <ChangePassword :currentPassword="actualPassword" v-if="actualPassword"/>
-
+      <DisableAccount/>
     </div>
 </div>
 
@@ -49,6 +48,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPen, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ChangePassword from '@/components/ChangePassword.vue';
+import DisableAccount from '@/components/DisableAccount.vue';
 
 library.add(faPen, faTimes);
 

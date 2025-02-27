@@ -29,6 +29,7 @@
                 <label class="flex flex-row items-start al text-base text-gray-600">
                     <input type="checkbox" name="remember" class="mr-2 relative top-2"><label>Remember me</label>
                 </label>
+                <router-link :to="'/verify-code'" class="text-[#1E201E] text-end w-1/2 ml-5">Forgot Password</router-link>
               </div>
               <button type="submit"
                   class="bg-[#1E201E] w-full text-white px-4 py-2 rounded-lg hover:bg-[#3C3D37] transition"
@@ -38,6 +39,8 @@
             </div>
             <h4 class="text-center text-sm text-[#1E201E] w-full">
                 <router-link :to="'/register.user'" class="text-[#1E201E]">Sign up</router-link>
+            </h4>
+            <h4 class="text-center text-sm text-[#1E201E] w-full">
             </h4>
         </form>
     </div>
@@ -75,6 +78,7 @@ const login = async () => {
     localStorage.setItem("userToken", response.data.token);
     localStorage.setItem("userMail", response.data.user.email);
     localStorage.setItem("userId", response.data.user.id);
+    localStorage.setItem("account", response.data.user.type);
 
     successMessage.value = "Verification successfull";
     setTimeout(()=>{

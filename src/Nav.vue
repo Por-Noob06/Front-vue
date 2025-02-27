@@ -33,7 +33,7 @@ const router = useRouter()
 const links = ref([
   { name: 'Home', path: '/home' },
   { name: 'Profile', path: '/user.profile' },
-  { name: 'Contact', path: '/home' },
+  { name: 'Manage User', path: '/home' },
 ])
 
 const goto = (path) => {
@@ -44,6 +44,7 @@ const logout = async () => {
   localStorage.removeItem('userToken')
   localStorage.removeItem('userId')
   localStorage.removeItem('userMail')
+  localStorage.removeItem('account')
   setTimeout(() => {
     router.push("/");
   }, 1500);
